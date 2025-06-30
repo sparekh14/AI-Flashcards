@@ -8,6 +8,9 @@
 ![Material-UI](https://img.shields.io/badge/Material--UI-0081CB?style=for-the-badge&logo=mui&logoColor=white)
 ![Clerk](https://img.shields.io/badge/Clerk-6C47FF?style=for-the-badge&logo=clerk&logoColor=white)
 
+## 🚀 **Live Demo**
+**Experience the app**: [Visit Website](https://ai-flashcards-liard.vercel.app/)
+
 A stunning, AI-powered SaaS application that transforms any text into intelligent flashcards with a beautiful, modern interface. Built with cutting-edge technologies and designed for professional presentation and optimal user experience.
 
 ## ✨ Visual Highlights

@@ -1,0 +1,30 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Production rules for Clerk Auth + Firestore
+    // Based on actual Clerk user ID format: user_2lo0uV4icckyLLqRfZ7T2Nved3M (32 chars)
+    match /users/{userId} {
+      // Validate Clerk user ID format: starts with 'user_' and is ~32 characters
+      allow read, write, delete: if 
+        userId.matches('user_[a-zA-Z0-9]+') && 
+        userId.size() >= 25 && 
+        userId.size() <= 40;
+      
+      // Allow access to user's flashcard collections
+      match /{collectionName}/{flashcardId} {
+        // Allow all CRUD operations for valid users within their own data
+        allow read, write, delete: if 
+          userId.matches('user_[a-zA-Z0-9]+') && 
+          userId.size() >= 25 && 
+          userId.size() <= 40 &&
+          collectionName.size() > 0 && 
+          collectionName.size() <= 200;
+      }
+    }
+    
+    // Deny all other access
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+} 

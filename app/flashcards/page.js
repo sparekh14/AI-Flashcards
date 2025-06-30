@@ -414,7 +414,7 @@ export default function Flashcards() {
                     <DialogTitle sx={{ fontWeight: 600 }}>Rename Collection</DialogTitle>
                     <DialogContent>
                         <DialogContentText sx={{ mb: 2 }}>
-                            Enter a new name for your collection "{editingCollection?.name || 'Unknown Collection'}"
+                            Enter a new name for your collection &quot;{editingCollection?.name || 'Unknown Collection'}&quot;
                         </DialogContentText>
                         <TextField
                             autoFocus
@@ -463,7 +463,7 @@ export default function Flashcards() {
                     <DialogTitle sx={{ fontWeight: 600, color: '#f56565' }}>Delete Collection</DialogTitle>
                     <DialogContent>
                         <DialogContentText>
-                            Are you sure you want to delete the collection "{deletingCollection?.name || 'Unknown Collection'}"? 
+                            Are you sure you want to delete the collection &quot;{deletingCollection?.name || 'Unknown Collection'}&quot;? 
                             This action cannot be undone and all flashcards in this collection will be permanently deleted.
                         </DialogContentText>
                     </DialogContent>

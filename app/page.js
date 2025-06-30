@@ -201,7 +201,7 @@ export default function Home() {
                     Lightning Fast AI
                   </Typography>
                   <Typography sx={{ color: 'rgba(255, 255, 255, 0.8)', lineHeight: 1.6 }}>
-                    Generate 12 optimized flashcards in seconds using OpenAI's GPT-4. 
+                    Generate 12 optimized flashcards in seconds using OpenAI&apos;s GPT-4. 
                     No more manual card creation.
                   </Typography>
                 </Box>
